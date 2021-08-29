@@ -1,4 +1,4 @@
-package ch01;
+ package ch01;
 
 class Outer2 {
 
@@ -22,7 +22,6 @@ class Outer2 {
 				System.out.println("i = " + i);
 				System.out.println("num = " + num);
 				System.out.println("localNum = " + localNum);
-
 				System.out.println("outNum = " + outNum + "(외부 클래스 인스턴스 변수 사용)");
 				System.out.println("sNum = " + sNum + "(외부 클래스 정적 변수 사용)");
 
