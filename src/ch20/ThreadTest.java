@@ -26,6 +26,9 @@ public class ThreadTest {
 		
 		System.out.println(Thread.currentThread() + " end");
 		
+		/*
+		 * 익명클래스로 thread 만들기
+		 */
 		Runnable runnable = new Runnable() {
 
 			@Override
