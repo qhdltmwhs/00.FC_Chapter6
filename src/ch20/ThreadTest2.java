@@ -1,6 +1,6 @@
 package ch20;
 
-class MyThread extends Thread {
+class MyThread2 implements Runnable {
 	
 	@Override
 	public void run() {
@@ -8,20 +8,22 @@ class MyThread extends Thread {
 			System.out.print(i + "\t");
 		}
 	}
-
+	
 }
 
-public class ThreadTest {
+public class ThreadTest2 {
 
 	public static void main(String[] args) {
-		
+
 		System.out.println(Thread.currentThread() + " start");
-		System.out.println("extends Thread");
+		System.out.println("implements Runnable");
 		
-		MyThread th1 = new MyThread();
+		MyThread2 mth = new MyThread2();
+		
+		Thread th1 = new Thread(mth);
 		th1.start();
 
-		MyThread th2 = new MyThread();
+		Thread th2 = new Thread(new MyThread2());
 		th2.start();
 
 		System.out.println(Thread.currentThread() + " end");
